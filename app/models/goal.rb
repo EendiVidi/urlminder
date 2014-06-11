@@ -19,7 +19,7 @@ class Goal
       url = "http://" + url unless url.match(/^http/)
       count = 0
       begin
-      count = HTTParty.get(url).body.split.size
+      count = HTTParty.get(url).body.gsub(/[^a-zA-Z0-9]/,"").size
       rescue Exception=>e
         # do something...
       end
