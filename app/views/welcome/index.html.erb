@@ -15,7 +15,7 @@
     <div cla
   <% if current_user && current_user.has_token %>
     <div class="well" id="connection">
-      You are connected to Beeminder as <%= current_user.username %>. Huzzah!
+      You are connected to Beeminder as <!--<%= current_user.username %>.--> Huzzah!
     </div>
     <% if current_user.goals.present? %>
       <div class="well" id="goals">
